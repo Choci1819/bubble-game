@@ -101,3 +101,24 @@ p {
     width: 16%;
     height: 40px;
 }
+
+#developer-name {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+#developer-name a {
+  color: #00ffff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+#developer-name a:hover {
+  text-decoration: underline;
+}
