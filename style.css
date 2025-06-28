@@ -164,3 +164,41 @@ p {
     min-width: 100px;
     width: 140px;
 }
+
+@media (max-width: 900px) {
+    .game-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .outer-box, .high-scores-box {
+        width: 98vw;
+        min-width: unset;
+        margin: 0 auto 24px auto;
+    }
+    .high-scores-box {
+        margin-left: 0 !important;
+    }
+    .bubble-table {
+        width: 100%;
+        margin: 12px auto;
+    }
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
+    }
+    .content {
+        padding: 8px;
+    }
+    .bubble {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+        margin: 2px;
+    }
+    #player-name {
+        width: 70vw;
+        font-size: 1rem;
+    }
+}
