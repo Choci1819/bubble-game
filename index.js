@@ -4,14 +4,6 @@ var hitsValue = 0;
 let playerName = "";
 let timeInterval = null;
 
-// Get random color for bubbles
-function getRandomColor() {
-    const colors = [
-        "#ff8a80", "#ffd180", "#a7ffeb", "#82b1ff", "#ea80fc", "#b9f6ca", "#ffff8d", "#ff9e80"
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-}
-
 // Create bubbles
 const createBubble = () => {
     const rows = 8;
@@ -86,12 +78,16 @@ const restartGame = () => {
             <input type="text" id="player-name" class="starting-text" placeholder="Enter your name" />
             <button class="starting-text" onclick="Startingfun()">Start</button>
         </div>
+        <table class="bubble-table" style="margin: 24px auto;">
+            <tbody id="bubble-table-body"></tbody>
+        </table>
     `;
     document.querySelector('.scoreValue').textContent = 0;
     document.querySelector('.timer').textContent = 30;
     timerValue = 30;
     scoreValue = 0;
     playerName = "";
+    displayHighScores();
 };
 
 // Start game after name entered
@@ -106,6 +102,7 @@ const Startingfun = () => {
     scoreValue = 0;
     document.querySelector('.scoreValue').textContent = scoreValue;
     document.querySelector('.timer').textContent = timerValue;
+    // Show the bubble table (don't replace .content, just fill the table)
     createBubble();
     hitsgenerate();
     setTimeing();
@@ -137,3 +134,11 @@ function displayHighScores() {
 
 // Show high scores on load
 window.onload = displayHighScores;
+
+// Helper for random bubble color
+function getRandomColor() {
+    const colors = [
+        "#ff8a80", "#ffd180", "#a7ffeb", "#82b1ff", "#ea80fc", "#b9f6ca", "#ffff8d", "#ff9e80"
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
