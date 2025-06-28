@@ -10,13 +10,14 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="game-layout" style="display: flex; align-items: flex-start; justify-content: center;">
         <div class="outer-box">
             <div class="navbar">
                 <div class="hits mr-2">
                     <h3>Hits</h3>
                     <p class="value-box hitsvalue">1</p>
                 </div>
+
                 <div class="time mr-2">
                     <h3>Time</h3>
                     <p class="value-box timer">30</p>
@@ -28,16 +29,30 @@
             </div>
             <div class="content">
                 <div class="Starting">
+                    <input type="text" id="player-name" class="starting-text" placeholder="Enter your name" />
                     <button class="starting-text" onclick="Startingfun()">Start</button>
                 </div>
+                <table class="bubble-table" style="margin: 24px auto;">
+                    <tbody id="bubble-table-body"></tbody>
+                </table>
             </div>
         </div>
-    </div>    
-<div id="developer-name">
-  Developed by  Pathivada Bhargava Krishna |
-  <a href="https://www.linkedin.com/in/pathivada-bhargava-krishna-047470266/" target="_blank">
-    <i class="fab fa-linkedin"></i></a> |
-  <a href="https://www.instagram.com/choci__boi__/" target="_blank"><i class="fab fa-instagram"></i></a>
-</div>    <script src="index.js"></script>
+        <div class="high-scores-box" style="margin-left: 40px;">
+            <h3>Top 10 High Scores</h3>
+            <table class="high-scores-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="high-scores-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <audio id="pop-sound" src="pop.mp3" preload="auto"></audio>
+    <script src="index.js"></script>
 </body>
+
 </html>

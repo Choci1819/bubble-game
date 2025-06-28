@@ -114,11 +114,53 @@ p {
 }
 
 #developer-name a {
-  color: #00ffff;
-  text-decoration: none;
-  margin: 0 5px;
+  color: #ffffff;
+  margin: 0 6px;
+  font-size: 16px;
 }
 
 #developer-name a:hover {
-  text-decoration: underline;
+  color: #00acee; /* optional hover color */
+}
+
+.bubble-color-1 { background: radial-gradient(circle at 30% 30%, #ff8a80 70%, #d32f2f 100%) !important; }
+.bubble-color-2 { background: radial-gradient(circle at 30% 30%, #ffd180 70%, #fbc02d 100%) !important; }
+.bubble-color-3 { background: radial-gradient(circle at 30% 30%, #a7ffeb 70%, #009688 100%) !important; }
+.bubble-color-4 { background: radial-gradient(circle at 30% 30%, #82b1ff 70%, #1976d2 100%) !important; }
+.bubble-color-5 { background: radial-gradient(circle at 30% 30%, #ea80fc 70%, #8e24aa 100%) !important; }
+
+.game-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+
+.high-scores-box {
+    background: #fff;
+    border: 2px solid #55a555;
+    border-radius: 12px;
+    padding: 20px 24px;
+    min-width: 220px;
+    min-height: 300px;
+    box-shadow: 0 0 10px #aaa;
+}
+
+.high-scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.high-scores-table th, .high-scores-table td {
+    border: 1px solid #55a555;
+    padding: 6px 12px;
+    text-align: center;
+}
+.high-scores-table th {
+    background: #e6ffe6;
+}
+.high-scores-table th:nth-child(2),
+.high-scores-table td:nth-child(2) {
+    min-width: 100px;
+    width: 140px;
 }
