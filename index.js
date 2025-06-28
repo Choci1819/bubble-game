@@ -113,7 +113,7 @@ const Startingfun = () => {
 
 // High score logic
 function saveHighScore(entry) {
-    fetch('http://localhost:3000/highscores', {
+    fetch('https://bubble-game-wysd.onrender.com/highscores', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(entry)
@@ -121,7 +121,7 @@ function saveHighScore(entry) {
 }
 
 function displayHighScores() {
-    fetch('http://localhost:3000/highscores')
+    fetch('https://bubble-game-wysd.onrender.com/highscores')
         .then(res => res.json())
         .then(scores => {
             const tbody = document.getElementById('high-scores-list');
